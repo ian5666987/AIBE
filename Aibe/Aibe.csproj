@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F6EDEE0-C480-463D-BFBF-C8E5EAC3769D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aibe</RootNamespace>
+    <AssemblyName>Aibe</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Checker">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Checker\bin\Release\Extension.Checker.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Cryptography">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Cryptography\bin\Release\Extension.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Database.SqlServer">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Release\Extension.Database.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Extractor">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Extractor\bin\Release\Extension.Extractor.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Models">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Models\bin\Release\Extension.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.String">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\String\bin\Release\Extension.String.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Values">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Values\bin\Release\Extension.Values.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customs\Reflections.cs" />
+    <Compile Include="Helpers\DateTimeHelper.cs" />
+    <Compile Include="Helpers\EmailHelper.cs" />
+    <Compile Include="Helpers\QueryHelper.cs" />
+    <Compile Include="Localization.cs" />
+    <Compile Include="DataHolder.cs" />
+    <Compile Include="Helpers\CheckerHelper.cs" />
+    <Compile Include="Helpers\LogicHelper.cs" />
+    <Compile Include="Helpers\KeyInfoHelper.cs" />
+    <Compile Include="Helpers\CryptographyHelper.cs" />
+    <Compile Include="Helpers\DropDownHelper.cs" />
+    <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\UserHelper.cs" />
+    <Compile Include="Helpers\ViewHelper.cs" />
+    <Compile Include="Models\BaseTableModel.cs" />
+    <Compile Include="Models\ActionProcedureParameterInfo.cs" />
+    <Compile Include="Models\BaseFilterIndexModel.cs" />
+    <Compile Include="Models\Core\Columns\ForeignInfoColumnInfo.cs" />
+    <Compile Include="Models\FilterGroupDetailsModel.cs" />
+    <Compile Include="Models\GroupByColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\ActionProcedureFullInfo.cs" />
+    <Compile Include="Models\Core\Columns\ActionProcedureInfo.cs" />
+    <Compile Include="Models\Core\Columns\AggregationStatementInfo.cs" />
+    <Compile Include="Models\Core\Columns\ActionTriggerInfo.cs" />
+    <Compile Include="Models\Core\Columns\AttachmentInfo.cs" />
+    <Compile Include="Models\ExecuteProcedureInfo.cs" />
+    <Compile Include="Models\EmailServiceType.cs" />
+    <Compile Include="Models\DB\BaseEmailInfo.cs" />
+    <Compile Include="Models\EmailActionInfo.cs" />
+    <Compile Include="Models\Core\Columns\EmailMakerFullInfo.cs" />
+    <Compile Include="Models\Core\Columns\EmailMakerTriggerInfo.cs" />
+    <Compile Include="Models\Core\Columns\EmailMakerInfo.cs" />
+    <Compile Include="Models\Core\Columns\CustomDateTimeFormatInfo.cs" />
+    <Compile Include="Models\Core\Columns\HistoryInfo.cs" />
+    <Compile Include="Models\Core\Columns\InclusionInfo.cs" />
+    <Compile Include="Models\Core\Columns\PrefilledColumnInfo.cs" />
+    <Compile Include="Models\DB\BaseMetaItem.cs" />
+    <Compile Include="Models\LiveDropDownArg.cs" />
+    <Compile Include="Models\ScTableInfo.cs" />
+    <Compile Include="Models\ColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\ActionInfo.cs" />
+    <Compile Include="Models\LiveDropDownResult.cs" />
+    <Compile Include="Models\Core\Columns\AffixColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\AutoGeneratedColumnInfo.cs" />
+    <Compile Include="Models\FilterIndexModel.cs" />
+    <Compile Include="Models\Core\Columns\ColoringInfo.cs" />
+    <Compile Include="Models\Core\Columns\ColoringTableValueRefInfo.cs" />
+    <Compile Include="Models\CompleteKeyInfo.cs" />
+    <Compile Include="Models\Core\Columns\DropDownInfo.cs" />
+    <Compile Include="Models\Core\Columns\DropDownItemInfo.cs" />
+    <Compile Include="Models\DropDownPassedArguments.cs" />
+    <Compile Include="Models\Core\Columns\ExclusionInfo.cs" />
+    <Compile Include="Models\Core\Columns\HistoryTriggerInfo.cs" />
+    <Compile Include="Models\KeyInfo.cs" />
+    <Compile Include="Models\Core\Columns\ListColumnInfo.cs" />
+    <Compile Include="Models\ListColumnResult.cs" />
+    <Compile Include="Models\Core\Columns\ListColumnSubItem.cs" />
+    <Compile Include="Models\Core\Columns\ListColumnItem.cs" />
+    <Compile Include="Models\NavDataModel.cs" />
+    <Compile Include="Models\Core\Columns\NumberLimitColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\OrderByInfo.cs" />
+    <Compile Include="Models\Core\Columns\ScriptConstructorColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\ScriptColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\PictureColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\RegexBaseInfo.cs" />
+    <Compile Include="Models\Core\Columns\RegexCheckedColumnExampleInfo.cs" />
+    <Compile Include="Models\Core\Columns\RegexCheckedColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\TableValueRefInfo.cs" />
+    <Compile Include="Models\Core\Columns\TextFieldColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\TimeStampColumnInfo.cs" />
+    <Compile Include="Models\Core\Columns\TimeStampColumnRowActionInfo.cs" />
+    <Compile Include="Models\Core\Columns\UserRelatedFilterInfo.cs" />
+    <Compile Include="Models\DB\IMetaItem.cs" />
+    <Compile Include="Models\Filters\BaseFilter.cs" />
+    <Compile Include="Models\Filters\RoleFilter.cs" />
+    <Compile Include="Models\MetaInfo.cs" />
+    <Compile Include="ParameterHolder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
