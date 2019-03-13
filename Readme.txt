@@ -1,6 +1,6 @@
-ASTrio In-house-built Base Engine (AIBE) is a base-project aimed to help to quickly build an application which deal with a lot of typical operations (or actions) on database tables (such warehouse projects) with customization capability. 
+ASTrio In-house-built Base Engine (AIBE) is a base-project aimed to help to quickly build an application which deal with a lot of typical operations (or actions, such as Index, Create, Edit, Delete, See Details, Filter, Export to CSV, etc) on database tables (such warehouse projects) with customization capability. AIBE engine is created by me while working at ASTrio Tech.
 
-*) Such projects normally require the code writing for all the controls, actions, and user rights needed for each of the table operations (such as Index, Create, Edit, Delete, and Details). 
+*) Such projects normally require the code writing for all the controls, actions, and user rights needed for each of the table operations (such as Index, Create, Edit, Delete, See Details, Filter, Export to CSV, etc). 
 *) With AIBE, only minimal scripts are required to configure them - greatly increase the development speed. Its code is designed with flexibility in mind, allowing for additional customized controls, actions (for instance, to make a report from a table row or to export the table to Excel), or user rights to be easily added. 
 *) The script creation could also be further eased by making use of "AIBE Editor" (https://github.com/ian5666987/AIBE_Editor), the editor I create specifically to write AIBE scripts with minimal effort.
 *) This project is NOT to be used alone (therefore it is a BASE project), but together with a GUI project built on top of the AIBE engine. 
